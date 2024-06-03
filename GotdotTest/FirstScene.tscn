@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0j3leyp6frs6"]
+
+[ext_resource type="Texture2D" uid="uid://cy671bqovahnl" path="res://鏡愛しゅくり 誕生日記念周边插画.jpg" id="1_yftsh"]
+
+[node name="FirstScene" type="Node2D"]
+
+[node name="鏡愛しゅくり誕生日記念周边插画" type="Sprite2D" parent="."]
+position = Vector2(565.034, 325.5)
+scale = Vector2(0.426791, 0.427987)
+texture = ExtResource("1_yftsh")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 588.0
+offset_top = 32.0
+offset_right = 652.0
+offset_bottom = 55.0
+text = "Hello World!"
