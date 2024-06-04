@@ -10,6 +10,6 @@ config_version=5
 
 [application]
 
-config/name="GodotTest"
+config/name="GDSStudy"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://Image/icon.svg"
+config/icon="res://icon.svg"

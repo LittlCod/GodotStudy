@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdpmwgdx2aetv"]
+
+[ext_resource type="Script" path="res://script/ThirdScrene.gd" id="1_bkhae"]
+[ext_resource type="Texture2D" uid="uid://bhffv5g8utdwg" path="res://Image/icon.svg" id="2_gx5cs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a0fcu"]
+size = Vector2(129, 127)
+
+[node name="ThirdScrene" type="Node"]
+process_mode = 1
+editor_description = "描述Node节点！！"
+script = ExtResource("1_bkhae")
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(484, 223)
+
+[node name="Avatar" type="Sprite2D" parent="Player"]
+texture = ExtResource("2_gx5cs")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/RigidBody2D"]
+position = Vector2(-5, 0)
+shape = SubResource("RectangleShape2D_a0fcu")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player/RigidBody2D"]
+remote_path = NodePath("../../Avatar")

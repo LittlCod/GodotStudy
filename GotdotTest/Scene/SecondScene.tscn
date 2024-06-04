@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dnjgi8u3mdwn3"]
 
-[ext_resource type="Texture2D" uid="uid://bhffv5g8utdwg" path="res://icon.svg" id="1_qpi2m"]
-[ext_resource type="Texture2D" uid="uid://cy671bqovahnl" path="res://鏡愛しゅくり 誕生日記念周边插画.jpg" id="2_igtse"]
+[ext_resource type="Texture2D" uid="uid://bhffv5g8utdwg" path="res://Image/icon.svg" id="1_qpi2m"]
+[ext_resource type="Texture2D" uid="uid://cy671bqovahnl" path="res://Image/鏡愛しゅくり 誕生日記念周边插画.jpg" id="2_igtse"]
 
 [node name="SecondScene" type="Node2D"]
 

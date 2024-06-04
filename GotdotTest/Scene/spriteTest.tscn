@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0hptash2kvaq"]
+
+[ext_resource type="Texture2D" uid="uid://b3l6o2lwxiigw" path="res://Image/composit_image.png" id="1_1qtep"]
+[ext_resource type="Texture2D" uid="uid://dkrniye3pcxkm" path="res://Image/bigpig.png" id="2_dakod"]
+
+[node name="SpriteTest" type="Node2D"]
+
+[node name="CompositImage" type="Sprite2D" parent="."]
+position = Vector2(533, 278)
+texture = ExtResource("1_1qtep")
+region_enabled = true
+region_rect = Rect2(84, 62, 172, 329)
+
+[node name="CompositImage2" type="Sprite2D" parent="."]
+position = Vector2(453, 218)
+texture = ExtResource("1_1qtep")
+region_enabled = true
+region_rect = Rect2(512, 119, 80, 79)
+
+[node name="CompositImage3" type="Sprite2D" parent="."]
+position = Vector2(725, 219)
+texture = ExtResource("1_1qtep")
+region_enabled = true
+region_rect = Rect2(386, 328, 178, 169)
+
+[node name="Bigpig" type="Sprite2D" parent="."]
+position = Vector2(174, 212)
+texture = ExtResource("2_dakod")
+region_enabled = true
+region_rect = Rect2(4, 4, 260, 340)
+
+[node name="Bigpig2" type="Sprite2D" parent="."]
+position = Vector2(1034, 272)
+texture = ExtResource("2_dakod")
+region_enabled = true
+region_rect = Rect2(276, 4, 215, 224)

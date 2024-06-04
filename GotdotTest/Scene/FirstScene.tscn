@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c0j3leyp6frs6"]
 
-[ext_resource type="Texture2D" uid="uid://cy671bqovahnl" path="res://鏡愛しゅくり 誕生日記念周边插画.jpg" id="1_yftsh"]
+[ext_resource type="Texture2D" uid="uid://cy671bqovahnl" path="res://Image/鏡愛しゅくり 誕生日記念周边插画.jpg" id="1_yftsh"]
 
 [node name="FirstScene" type="Node2D"]
 
