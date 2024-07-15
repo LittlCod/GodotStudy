@@ -10,8 +10,8 @@
 
 ### GDSStudy
 
-GDScript基础
+GDScript的一些基础
 
 ### GDSStudy2
 
-图形界面相关的一些学习
+GDScript学习2
