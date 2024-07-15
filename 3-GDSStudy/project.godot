@@ -1,0 +1,12 @@
+config_version=5
+
+[application]
+
+config/name="3-GDSStudy"
+config/tags=PackedStringArray("study")
+config/features=PackedStringArray("4.2", "Forward Plus")
+config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="viewport"

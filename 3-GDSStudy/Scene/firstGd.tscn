@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7lhixghcdag3"]
+
+[ext_resource type="Script" path="res://Script/firstGd.gd" id="1_smmig"]
+[ext_resource type="Script" path="res://Script/testExport.gd" id="2_dltxl"]
+[ext_resource type="Texture2D" uid="uid://chwehsjbnxrvi" path="res://icon.svg" id="3_qobub"]
+[ext_resource type="Script" path="res://Script/testStatic.gd" id="4_d20eb"]
+[ext_resource type="Script" path="res://Script/testClass.gd" id="5_5x512"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_smmig")
+
+[node name="testExportNode" type="Node2D" parent="." node_paths=PackedStringArray("np")]
+script = ExtResource("2_dltxl")
+np = NodePath("..")
+file = "res://icon.svg.import"
+file2 = "res://icon.svg"
+file3 = ExtResource("3_qobub")
+color = Color(0.871446, 1.45355e-05, 0.592749, 1)
+
+[node name="testStatic" type="Node2D" parent="."]
+script = ExtResource("4_d20eb")
+
+[node name="testClass" type="Node2D" parent="."]
+script = ExtResource("5_5x512")

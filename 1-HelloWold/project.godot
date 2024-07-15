@@ -1,0 +1,8 @@
+config_version=5
+
+[application]
+
+config/name="1-HelloWorld"
+config/features=PackedStringArray("4.2", "Forward Plus")
+config/icon="res://icon.svg"
+config/tags=PackedStringArray("study")
