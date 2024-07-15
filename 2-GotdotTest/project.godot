@@ -1,0 +1,8 @@
+config_version=5
+
+[application]
+
+config/name="2-GodotTest"
+config/tags=PackedStringArray("study")
+config/features=PackedStringArray("4.2", "Forward Plus")
+config/icon="res://Image/icon.svg"

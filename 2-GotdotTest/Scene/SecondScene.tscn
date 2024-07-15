@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnjgi8u3mdwn3"]
+
+[ext_resource type="Texture2D" uid="uid://bhffv5g8utdwg" path="res://Image/icon.svg" id="1_qpi2m"]
+[ext_resource type="Texture2D" uid="uid://cy671bqovahnl" path="res://Image/鏡愛しゅくり 誕生日記念周边插画.jpg" id="2_igtse"]
+
+[node name="SecondScene" type="Node2D"]
+
+[node name="g11" type="Sprite2D" parent="."]
+position = Vector2(240, 81)
+scale = Vector2(1.63599, 1.63599)
+texture = ExtResource("1_qpi2m")
+
+[node name="onineko" type="Sprite2D" parent="."]
+position = Vector2(590, 412)
+scale = Vector2(0.306056, 0.306056)
+texture = ExtResource("2_igtse")
+offset = Vector2(-101.289, -431.294)
+metadata/_edit_group_ = true
+
+[node name="g22" type="Sprite2D" parent="onineko"]
+position = Vector2(-1127.24, -114.358)
+rotation = 0.600062
+scale = Vector2(-6.59641, 8.98417)
+texture = ExtResource("1_qpi2m")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 996.0
+offset_top = 225.0
+offset_right = 1044.0
+offset_bottom = 248.0
+text = "锚点？"
