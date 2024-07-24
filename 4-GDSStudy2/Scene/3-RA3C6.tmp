@@ -29,6 +29,7 @@ shape = SubResource("RectangleShape2D_4e2p1")
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(492, 395)
 script = ExtResource("2_xyld8")
+speed = null
 metadata/_edit_group_ = true
 
 [node name="CharacterSpr" type="Sprite2D" parent="CharacterBody2D"]

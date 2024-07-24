@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Node2D
 
 # 定义速度变量和屏幕大小的变量
 @export var speed = 500
@@ -8,7 +8,7 @@ var player_size
 func _ready():
 	# 获取屏幕和精灵的长宽
 	screen_size = get_viewport_rect().size
-	player_size = self.get_rect().size
+	# player_size = self.get_rect().size
 	
 # move函数
 func move(dir):
@@ -35,5 +35,7 @@ func _process(delta):
 	if dir:
 		# dir是速度，delta是每帧的间隔时间  速度*时间=距离
 		position += dir * delta
-		position.x = clamp(position.x, 0, screen_size.x - player_size.x)
-		position.y = clamp(position.y, 0, screen_size.y - player_size.y)
+		#position.x = clamp(position.x, 0, screen_size.x - player_size.x)
+		#position.y = clamp(position.y, 0, screen_size.y - player_size.y)
+		position.x = clamp(position.x, 0, screen_size.x)
+		position.y = clamp(position.y, 0, screen_size.y)
