@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cohp6oumeqcyq"]
+
+[ext_resource type="Texture2D" uid="uid://cofmkfmkt67bf" path="res://icon.svg" id="1_4nbih"]
+[ext_resource type="Script" path="res://Script/6-path.gd" id="2_ud5ea"]
+
+[sub_resource type="Curve2D" id="Curve2D_0y44o"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 161, 124, 0, 0, 0, 0, 307, 110, 0, 0, 0, 0, 632, 236, 0, 0, 0, 0, 831, 243, 0, 0, 0, 0, 911, 162, 0, 0, 0, 0, 996, 337, 0, 0, 0, 0, 903, 488, 0, 0, 0, 0, 773, 562, 0, 0, 0, 0, 569, 549, 0, 0, 0, 0, 476, 442, 0, 0, 0, 0, 327, 371, 0, 0, 0, 0, 189, 472, 0, 0, 0, 0, 87, 431, 0, 0, 0, 0, 24, 189, 0, 0, 0, 0, 113, 94, 0, 0, 0, 0, 439, 152, 0, 0, 0, 0, 446, 284, 0, 0, 0, 0, 364, 429, 0, 0, 0, 0, 399, 514, 0, 0, 0, 0, 622, 434, 0, 0, 0, 0, 760, 354, 0, 0, 0, 0, 858, 255, 0, 0, 0, 0, 612, 152, 0, 0, 0, 0, 509, 239, 0, 0, 0, 0, 521, 339, 0, 0, 0, 0, 323, 455, 0, 0, 0, 0, 211, 362, 0, 0, 0, 0, 120, 215, 0, 0, 0, 0, 131, 359, 0, 0, 0, 0, 309, 502, 0, 0, 0, 0, 736, 480, 0, 0, 0, 0, 904, 532, 0, 0, 0, 0, 954, 487, 0, 0, 0, 0, 973, 193, 0, 0, 0, 0, 932, 89, 0, 0, 0, 0, 744, 9, 0, 0, 0, 0, 645, 62, 0, 0, 0, 0, 759, 107, 0, 0, 0, 0, 962, 86, 0, 0, 0, 0, 1032, -24, 0, 0, 0, 0, 1176, -47, 0, 0, 0, 0, 1315, 112, 0, 0, 0, 0, 1207, 267, 0, 0, 0, 0, 1030, 380, 0, 0, 0, 0, 1071, 517, 0, 0, 0, 0, 1096, 594)
+}
+point_count = 46
+
+[node name="Path" type="Node2D"]
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(2, -2)
+curve = SubResource("Curve2D_0y44o")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(161, 124)
+rotation = -0.0955981
+script = ExtResource("2_ud5ea")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Path2D/PathFollow2D"]
+position = Vector2(-4.88174, -1.47269)
+remote_path = NodePath("../../../Player")
+
+[node name="Player" type="Sprite2D" parent="."]
+position = Vector2(158, 121)
+rotation = -0.0955981
+texture = ExtResource("1_4nbih")

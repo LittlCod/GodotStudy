@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0n5f6b84emlh"]
+
+[ext_resource type="Texture2D" uid="uid://cofmkfmkt67bf" path="res://icon.svg" id="1_g58qn"]
+[ext_resource type="Script" path="res://Script/2-move/player.gd" id="2_irigl"]
+
+[node name="Remote" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(939, 270)
+texture = ExtResource("1_g58qn")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+position = Vector2(538, 360)
+remote_path = NodePath("../Sprite2D")
+script = ExtResource("2_irigl")

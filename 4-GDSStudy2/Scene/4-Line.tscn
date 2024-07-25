@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://hbo3dej4i8s8"]
+
+[ext_resource type="Script" path="res://Script/4-line/line.gd" id="1_enukv"]
+[ext_resource type="Script" path="res://Script/4-line/PlayerLine.gd" id="2_fe6xn"]
+[ext_resource type="Script" path="res://Script/2-move/player.gd" id="2_hx0ml"]
+[ext_resource type="Texture2D" uid="uid://cofmkfmkt67bf" path="res://icon.svg" id="2_xnuws"]
+
+[sub_resource type="Curve" id="Curve_ov08v"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 1.4, 0.0, 0, 0]
+point_count = 2
+metadata/_snap_enabled = true
+
+[node name="line" type="Node2D"]
+
+[node name="LineTest" type="Line2D" parent="."]
+position = Vector2(516, 311)
+default_color = Color(0.782932, 0.0860637, 0.331504, 1)
+script = ExtResource("1_enukv")
+
+[node name="PlayerLine" type="Line2D" parent="."]
+width_curve = SubResource("Curve_ov08v")
+default_color = Color(1, 0.619608, 0.286275, 1)
+script = ExtResource("2_fe6xn")
+
+[node name="Player" type="Sprite2D" parent="."]
+position = Vector2(478, 354)
+scale = Vector2(0.546875, 0.546875)
+texture = ExtResource("2_xnuws")
+script = ExtResource("2_hx0ml")
