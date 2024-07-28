@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://dv6s78wcibt4a"]
 
 [ext_resource type="Texture2D" uid="uid://djbbrqn27delj" path="res://Image/Grasslands.png" id="1_ayvvj"]
-[ext_resource type="Script" path="res://Script/7-tile/tile.gd" id="1_ca8bt"]
+[ext_resource type="Script" path="res://Script/7-tile/tile1.gd" id="1_ca8bt"]
 [ext_resource type="Texture2D" uid="uid://cax5v4xwynudu" path="res://Image/Robi.png" id="3_0n8v8"]
 [ext_resource type="Script" path="res://Script/3-rigid/character.gd" id="3_jhsm1"]
 
@@ -70,6 +70,7 @@ texture = ExtResource("1_ayvvj")
 5:0/0/probability = 0.5
 5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
 5:0/0/terrains_peering_bit/right_side = 1
 5:0/0/terrains_peering_bit/bottom_right_corner = 1
 5:0/0/terrains_peering_bit/bottom_side = 1
@@ -88,7 +89,7 @@ texture = ExtResource("1_ayvvj")
 15:0/0/probability = 0.1
 15:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:0/0/physics_layer_0/angular_velocity = 0.0
-15:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35.5, -14, -21.5, -23.5, -0.23872, -29.3394, 29, -21.5, 35, 5.5, 20.5, 23.5, 2.5, 23.5, -13, 27.5, -30, 13, -36, 1.5)
+15:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
 15:0/0/terrains_peering_bit/right_side = 1
 15:0/0/terrains_peering_bit/bottom_right_corner = 1
 15:0/0/terrains_peering_bit/bottom_side = 1
@@ -104,7 +105,7 @@ texture = ExtResource("1_ayvvj")
 20:0/0/probability = 0.2
 20:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 20:0/0/physics_layer_0/angular_velocity = 0.0
-20:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4, -10.5, -21.5, -2.5, -32.5, 29.5, -29, 35.5, -4, 10, 2.5, 2.5, 23.5, -13, 27.5, -32.5, 23.5, -36, 1.5)
+20:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
 20:0/0/terrains_peering_bit/right_side = 1
 20:0/0/terrains_peering_bit/bottom_right_corner = 1
 20:0/0/terrains_peering_bit/bottom_side = 1
@@ -476,17 +477,21 @@ tile_set = SubResource("TileSet_i0dsw")
 format = 2
 layer_0/tile_data = PackedInt32Array(65538, 1638400, 5, 65539, 1638400, 5, 65540, 1638400, 5, 65541, 1638400, 5, 65542, 1638400, 5, 65543, 1638400, 5, 65544, 1638400, 5, 65545, 1638400, 10, 65546, 327680, 0, 131082, 983040, 0, 131083, 655360, 0, 196619, 1310720, 0, 262155, 983040, 0, 327691, 0, 0, 393227, 327680, 0, 393226, 327680, 0, 458762, 1638400, 5, 458761, 1638400, 5, 458760, 1638400, 5, 458759, 1310720, 15, 458758, 327680, 0, 458757, 1310720, 0, 393221, 327680, 0, 327685, 0, 0, 65537, 1638400, 5, 131073, 0, 0, 196609, 1638400, 5, 262145, 1310720, 0, 327681, 0, 5, 327682, 327680, 5, 327683, 327680, 5, 327684, 655360, 5, 196613, 1638400, 5, 196614, 1638400, 5, 262151, 983040, 10, 262152, 0, 0, 262153, 983040, 10, 327689, 983040, 15, 327688, 0, 0, 196616, 0, 0, 131080, 1310720, 0, 327687, 983040, 10, 196615, 1638400, 10, 131079, 0, 0, 327686, 327680, 0, 262150, 655360, 0, 131078, 0, 0, 262149, 327680, 0, 131077, 327680, 0, 524302, 327680, 0, 458766, 0, 0, 393230, 0, 0, 327694, 0, 0, 262158, 327680, 0, 196622, 327680, 0, 131086, 0, 0, 65550, 327680, 0, 14, 1310720, 0, 524301, 0, 0, 458765, 1638400, 15, 393229, 983040, 10, 327693, 983040, 10, 262157, 983040, 10, 196621, 983040, 10, 131085, 983040, 5, 65549, 0, 0, 13, 0, 0, 524300, 0, 0, 458764, 1638400, 5, 393228, 0, 0, 327692, 327680, 0, 262156, 0, 0, 196620, 655360, 0, 131084, 0, 0, 65548, 327680, 0, 12, 1310720, 0, 524299, 655360, 0, 458763, 1638400, 5, 65547, 327680, 0, 11, 655360, 0, 524298, 0, 0, 327690, 327680, 0, 262154, 0, 0, 196618, 0, 0, 10, 0, 0, 524297, 327680, 0, 393225, 0, 0, 196617, 983040, 10, 131081, 983040, 10, 9, 1310720, 0, 524296, 983040, 0, 393224, 0, 0, 8, 327680, 0, 524295, 655360, 0, 393223, 983040, 10, 7, 327680, 0, 524294, 655360, 0, 393222, 1310720, 0, 6, 0, 0, 524293, 0, 0, 5, 327680, 0, 524292, 655360, 0, 458756, 655360, 15, 393220, 655360, 10, 262148, 0, 0, 196612, 1638400, 5, 131076, 0, 0, 4, 655360, 0, 524291, 0, 0, 458755, 327680, 15, 393219, 327680, 10, 262147, 983040, 0, 196611, 1638400, 5, 131075, 0, 0, 3, 655360, 0, 524290, 0, 0, 458754, 327680, 15, 393218, 327680, 10, 262146, 1310720, 0, 196610, 1638400, 5, 131074, 327680, 0, 2, 327680, 0, 524289, 0, 0, 458753, 0, 15, 393217, 0, 10, 1, 327680, 0, 524288, 327680, 0, 458752, 0, 0, 393216, 655360, 0, 327680, 1310720, 0, 262144, 0, 0, 196608, 1310720, 15, 131072, 983040, 10, 65536, 1310720, 10, 0, 0, 0)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Line2D" type="Line2D" parent="."]
+
+[node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(1088, 32)
 scale = Vector2(0.19279, 0.17218)
 script = ExtResource("3_jhsm1")
 metadata/_edit_group_ = true
 
-[node name="Player" type="Sprite2D" parent="CharacterBody2D"]
-scale = Vector2(1, 1)
+[node name="PlayerSprite" type="Sprite2D" parent="Player"]
 texture = ExtResource("3_0n8v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="PlayerBox" type="CollisionShape2D" parent="Player"]
 position = Vector2(0, 8.71178)
 scale = Vector2(1.2468, 0.847345)
 shape = SubResource("RectangleShape2D_y4pt4")
+
+[node name="PlayerNav" type="NavigationAgent2D" parent="Player"]
+path_max_distance = 1000.0
