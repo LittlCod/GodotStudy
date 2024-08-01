@@ -37,8 +37,11 @@ func get_tile_speed():
 	var position = self.position
 	var tile = tile_map.local_to_map(position)
 	var cell_data = tile_map.get_cell_tile_data(0, tile)
-	var speed = cell_data.get_custom_data("speed")
-	return speed
+	if cell_data:
+		var speed = cell_data.get_custom_data("speed")
+		return speed
+	else :
+		return 10
 
 func _physics_process(delta):
 	get_tile_speed()

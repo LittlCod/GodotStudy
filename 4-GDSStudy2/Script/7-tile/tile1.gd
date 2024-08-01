@@ -5,8 +5,6 @@ extends Node2D
 @onready var line_2d = $Line2D
 @onready var player_nav = $Player/PlayerNav
 var speed = 200
-# 射线长度，范围
-var scope = 60
 
 func _unhandled_input(event: InputEvent) -> void:
 	# 鼠标左键按下
