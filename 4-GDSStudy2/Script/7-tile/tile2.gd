@@ -22,19 +22,24 @@ func _ready():
 func updateDirection():
 	direction = Vector2.ZERO
 	var direct_space_state = get_world_2d().direct_space_state
-
+	var dir = 0
 	# 如果有碰撞，则从8个方向中寻找一个没有发生碰撞并且不是相反的方向继续移动
 	for i in 8:
 		# 只取目标方向60度角以内的方向
-		var dotValue = ray_direction[i].dot((player_nav.get_next_path_position() - position).normalized())
+		var dotValue = ray_direction[i].dot((player_nav.get_next_path_position() - player.position).normalized())
+		print(dotValue)
+		if (dir > dotValue):
+			continue
+		else :
+			dir = dotValue
 		if dotValue < 0:
 			continue
 		# 判断ray是否碰撞到碰撞体，取第一个没有发生碰撞的方向射线
-		var direction_params = PhysicsRayQueryParameters2D.create(position, position + ray_direction[i] * scope)
+		var direction_params = PhysicsRayQueryParameters2D.create(player.position, player.position + ray_direction[i] * scope)
 		if (direct_space_state.intersect_ray(direction_params).is_empty()):
 			direction += ray_direction[i] * dotValue
 	direction = direction.normalized()
-	last_position = position
+	last_position = player.position
 
 func _unhandled_input(event: InputEvent) -> void:
 	# 鼠标左键按下
