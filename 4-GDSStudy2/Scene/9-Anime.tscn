@@ -1,3 +1,21 @@
-[gd_scene format=3 uid="uid://drtwejbt8x8iw"]
+[gd_scene load_steps=3 format=3 uid="uid://drtwejbt8x8iw"]
+
+[ext_resource type="Texture2D" uid="uid://cbsr2eyis1gj1" path="res://Image/anime/player.png" id="1_j5tah"]
+[ext_resource type="Script" path="res://Script/9-anime/anime.gd" id="2_bpecn"]
 
 [node name="9-anime" type="Node2D"]
+
+[node name="anime1" type="Node2D" parent="."]
+
+[node name="Player" type="Sprite2D" parent="anime1"]
+position = Vector2(177, 134)
+scale = Vector2(2.84926, 2.48413)
+texture = ExtResource("1_j5tah")
+hframes = 60
+region_enabled = true
+region_rect = Rect2(0, 0, 3837.42, 64)
+script = ExtResource("2_bpecn")
+
+[node name="Timer" type="Timer" parent="anime1/Player"]
+wait_time = 0.1
+autostart = true

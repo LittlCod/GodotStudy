@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgppmhmai3t3x"
-path="res://.godot/imported/animation5.png-6f93fff5b706c64f4d98c1cd53267757.ctex"
+uid="uid://b0dvovr52mlb3"
+path="res://.godot/imported/run-4.png-b9d3f2ef6c2ed3dc33804dd809b8780a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Image/anime/animation5.png"
-dest_files=["res://.godot/imported/animation5.png-6f93fff5b706c64f4d98c1cd53267757.ctex"]
+source_file="res://Image/anime/run-4.png"
+dest_files=["res://.godot/imported/run-4.png-b9d3f2ef6c2ed3dc33804dd809b8780a.ctex"]
 
 [params]
 
