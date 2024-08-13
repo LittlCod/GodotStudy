@@ -3,6 +3,100 @@
 [ext_resource type="Texture2D" uid="uid://cbsr2eyis1gj1" path="res://Image/anime/player.png" id="1_j5tah"]
 [ext_resource type="Script" path="res://Script/9-anime/timer.gd" id="2_bpecn"]
 [ext_resource type="Script" path="res://Script/9-anime/tween.gd" id="3_l7wkq"]
+[gd_scene load_steps=15 format=3 uid="uid://drtwejbt8x8iw"]
+
+[ext_resource type="Texture2D" uid="uid://cbsr2eyis1gj1" path="res://Image/anime/player.png" id="1_j5tah"]
+[ext_resource type="Script" path="res://Script/9-anime/anime.gd" id="2_bpecn"]
+[ext_resource type="Texture2D" uid="uid://dvyg4xubhtmr" path="res://Image/anime/run-1.png" id="3_f0aqu"]
+[ext_resource type="Texture2D" uid="uid://cvx8rjxarrvi0" path="res://Image/anime/run-2.png" id="4_oruem"]
+[ext_resource type="Texture2D" uid="uid://c6vb7d2xtsumg" path="res://Image/anime/run-3.png" id="5_twsao"]
+[ext_resource type="Texture2D" uid="uid://b0dvovr52mlb3" path="res://Image/anime/run-4.png" id="6_dovak"]
+[ext_resource type="Texture2D" uid="uid://1tg2kpd1it65" path="res://Image/anime/run-5.png" id="7_a7bit"]
+[ext_resource type="Texture2D" uid="uid://bknpdm4h6g27i" path="res://Image/anime/run-6.png" id="8_b060k"]
+[ext_resource type="Texture2D" uid="uid://cxmiyoadfluv6" path="res://Image/anime/run-7.png" id="9_2rn72"]
+[ext_resource type="Texture2D" uid="uid://b0m0uh664x48q" path="res://Image/anime/run-8.png" id="10_aq8uv"]
+
+[sub_resource type="Animation" id="Animation_qu6rv"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 1.3, 4.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(10, 0), Vector2(50, 0), Vector2(100, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 2.1, 4.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0, 20, 10]
+}
+
+[sub_resource type="Animation" id="Animation_2c7qq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x7mav"]
+_data = {
+"RESET": SubResource("Animation_2c7qq"),
+"new_animation": SubResource("Animation_qu6rv")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qgtbn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_f0aqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_oruem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_twsao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dovak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_a7bit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_b060k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2rn72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_aq8uv")
+}],
+"loop": true,
+"name": &"player",
+"speed": 10.0
+}]
 
 [node name="9-anime" type="Node2D"]
 
@@ -35,3 +129,28 @@ script = ExtResource("3_l7wkq")
 [node name="AnimationPlayer" type="Node2D" parent="."]
 
 [node name="AnimatedSprite" type="Node2D" parent="."]
+[node name="anime3" type="Node2D" parent="."]
+
+[node name="Player" type="Sprite2D" parent="anime3"]
+position = Vector2(169, 417)
+scale = Vector2(2.84926, 2.48413)
+texture = ExtResource("1_j5tah")
+offset = Vector2(33.3333, 0)
+hframes = 60
+region_enabled = true
+region_rect = Rect2(0, 0, 3837.42, 64)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="anime3"]
+libraries = {
+"": SubResource("AnimationLibrary_x7mav")
+}
+autoplay = "new_animation"
+
+[node name="anime4" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="anime4"]
+position = Vector2(283.825, 544.25)
+scale = Vector2(2.03731, 2.03731)
+sprite_frames = SubResource("SpriteFrames_qgtbn")
+animation = &"player"
+autoplay = "player"

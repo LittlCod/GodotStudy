@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqjxtvreua7ox"]
+
+[ext_resource type="Texture2D" uid="uid://c3n1tk6nw48xs" path="res://Image/white_square.png" id="1_7aauq"]
+[ext_resource type="Texture2D" uid="uid://cofmkfmkt67bf" path="res://icon.svg" id="1_eg55u"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_en66d"]
+polygon = PackedVector2Array(0, 0, 128, 0, 128, 128, 0, 128)
+
+[node name="10-light" type="Node2D"]
+
+[node name="Sprite2D" type="Polygon2D" parent="."]
+position = Vector2(-61, -62)
+scale = Vector2(4.77037, 2.81481)
+color = Color(0.329158, 0.329158, 0.329158, 1)
+polygon = PackedVector2Array(0, 0, 270, 0, 270, 270, 0, 270)
+
+[node name="Sprite2D2" type="Polygon2D" parent="."]
+position = Vector2(385, 142)
+scale = Vector2(0.955555, 1.78519)
+color = Color(0.0588235, 0.411765, 1, 1)
+polygon = PackedVector2Array(0, 0, 270, 0, 270, 270, 0, 270)
+
+[node name="Sprite2D3" type="Polygon2D" parent="."]
+position = Vector2(742, 141)
+scale = Vector2(0.837037, 1.78148)
+color = Color(0.520053, 0.000193101, 0.520049, 1)
+polygon = PackedVector2Array(0, 0, 270, 0, 270, 270, 0, 270)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(101, 74)
+scale = Vector2(0.3975, 0.410142)
+shadow_enabled = true
+texture = ExtResource("1_7aauq")
+texture_scale = 24.8
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(264, 264)
+texture = ExtResource("1_eg55u")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite2D4"]
+position = Vector2(-68, -65)
+occluder = SubResource("OccluderPolygon2D_en66d")
