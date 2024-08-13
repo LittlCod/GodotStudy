@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cofmkfmkt67bf" path="res://icon.svg" id="1_eg55u"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_en66d"]
-polygon = PackedVector2Array(0, 0, 128, 0, 128, 128, 0, 128)
+polygon = PackedVector2Array(9, 4, 125, 6, 123, 123, 6, 123)
 
 [node name="10-light" type="Node2D"]
 
@@ -27,7 +27,7 @@ color = Color(0.520053, 0.000193101, 0.520049, 1)
 polygon = PackedVector2Array(0, 0, 270, 0, 270, 270, 0, 270)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(101, 74)
+position = Vector2(56, 159)
 scale = Vector2(0.3975, 0.410142)
 shadow_enabled = true
 texture = ExtResource("1_7aauq")
