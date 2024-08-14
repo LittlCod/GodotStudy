@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dtqqaqw1flori"
+path="res://.godot/imported/46 - X光狗-Motown Yotown_沟槽_(46 _爱给网_aigei_com.mp3-abe8a4d17a34e6cf221b33891ba05dd5.mp3str"
+
+[deps]
+
+source_file="res://Music/46 - X光狗-Motown Yotown_沟槽_(46 _爱给网_aigei_com.mp3"
+dest_files=["res://.godot/imported/46 - X光狗-Motown Yotown_沟槽_(46 _爱给网_aigei_com.mp3-abe8a4d17a34e6cf221b33891ba05dd5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

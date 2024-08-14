@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://c63qt3p2uu5vo"]
+
+[ext_resource type="AudioStream" uid="uid://dtqqaqw1flori" path="res://Music/46 - X光狗-Motown Yotown_沟槽_(46 _爱给网_aigei_com.mp3" id="1_gimyk"]
+[ext_resource type="Script" path="res://Script/15-Sound/middle_start.gd" id="2_pk36f"]
+[ext_resource type="Texture2D" uid="uid://cofmkfmkt67bf" path="res://icon.svg" id="3_7u6he"]
+[ext_resource type="AudioStream" uid="uid://uunihmat1phg" path="res://Music/Sound/一路小跑脚步声_爱给网_aigei_com.mp3" id="3_koun6"]
+[ext_resource type="Script" path="res://Script/2-move/player.gd" id="4_hbn1h"]
+
+[node name="15-sound" type="Node2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_gimyk")
+volume_db = -40.0
+script = ExtResource("2_pk36f")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(16, 16)
+stream = ExtResource("3_koun6")
+autoplay = true
+max_distance = 1000.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1048, 536)
+texture = ExtResource("3_7u6he")
+script = ExtResource("4_hbn1h")

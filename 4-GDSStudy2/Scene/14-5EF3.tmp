@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://nt8aa8avytb5"]
+
+[ext_resource type="PackedScene" uid="uid://bfa7yllh1igk6" path="res://Scene/13-Camera.tscn" id="1_55rje"]
+[ext_resource type="Script" path="res://Script/13-camera/player.gd" id="2_i80j4"]
+
+[node name="14-viewport" type="Node2D"]
+
+[node name="13-camera" parent="." instance=ExtResource("1_55rje")]
+position = Vector2(0, 0)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+modulate = Color(0, 1, 1, 1)
+offset_left = 392.0
+offset_top = 112.0
+offset_right = 432.0
+offset_bottom = 152.0
+script = ExtResource("2_i80j4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="SubViewportContainer"]
+follow_viewport_enabled = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+
+[node name="13-camera2" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_55rje")]
+
+[node name="Camera2D" type="Camera2D" parent="SubViewportContainer/SubViewport"]

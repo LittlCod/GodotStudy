@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfa7yllh1igk6"]
+
+[ext_resource type="Texture2D" uid="uid://cofmkfmkt67bf" path="res://icon.svg" id="1_8tdhh"]
+[ext_resource type="Script" path="res://Script/13-camera/btn.gd" id="1_pi1ng"]
+[ext_resource type="Script" path="res://Script/13-camera/player.gd" id="2_ne8mj"]
+
+[node name="13-camera" type="Node2D"]
+position = Vector2(0, -32)
+
+[node name="Camera_rt" type="Camera2D" parent="."]
+position = Vector2(576, -324)
+enabled = false
+
+[node name="Camera_lt" type="Camera2D" parent="."]
+position = Vector2(-576, -324)
+enabled = false
+
+[node name="Camera_lb" type="Camera2D" parent="."]
+position = Vector2(-576, 324)
+enabled = false
+
+[node name="Camera_rb" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+enabled = false
+
+[node name="Button_lt" type="Button" parent="."]
+offset_left = -128.0
+offset_top = -64.0
+text = "左上相机"
+script = ExtResource("1_pi1ng")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_rt" type="Button" parent="."]
+offset_top = -64.0
+offset_right = 128.0
+text = "右上相机"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_lb" type="Button" parent="."]
+offset_left = -128.0
+offset_bottom = 64.0
+text = "左下相机"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_rb" type="Button" parent="."]
+offset_right = 128.0
+offset_bottom = 64.0
+text = "右下相机"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(352, 312)
+texture = ExtResource("1_8tdhh")
+script = ExtResource("2_ne8mj")
+
+[node name="Camera2D" type="Camera2D" parent="Sprite2D"]

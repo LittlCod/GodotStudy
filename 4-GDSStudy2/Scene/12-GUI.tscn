@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://c4iton7acq4d"]
+
+[node name="12-gui" type="Node2D"]
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 207.0
+offset_top = 161.0
+offset_right = 871.0
+offset_bottom = 418.0
+columns = 5
+
+[node name="Button" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "按钮111按钮您您您您您您您您您您您您
+
+
+
+
+
+
+您您您您您您您"
+
+[node name="CodeEdit" type="CodeEdit" parent="GridContainer"]
+custom_minimum_size = Vector2(200, 300)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "123"
+
+[node name="Button3" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "123"
+
+[node name="Button4" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "123"
+
+[node name="Button5" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "1235555"
+
+[node name="Button6" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "12357567567567"
+
+[node name="Button7" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "123"
+
+[node name="Button8" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "123"
+
+[node name="Button9" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "123"
+
+[node name="Button10" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "123"
+
+[node name="Button11" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "123"
+
+[node name="Button12" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "123"
+
+[node name="Button13" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "123"
+
+[node name="Button14" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "123"

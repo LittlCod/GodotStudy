@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://cpvn7pv5it1ex"]
+
+[ext_resource type="Texture2D" uid="uid://cofmkfmkt67bf" path="res://icon.svg" id="1_whm8h"]
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_cm1j1"]
+
+[sub_resource type="Curve" id="Curve_g5nku"]
+_data = [Vector2(0, 0.658824), 0.0, 0.0, 0, 0, Vector2(0.513889, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_e1x2y"]
+curve = SubResource("Curve_g5nku")
+
+[sub_resource type="Curve" id="Curve_sr1bm"]
+_data = [Vector2(0, 0), 0.0, 0.0847063, 0, 1, Vector2(0.138889, 0.0117648), 0.0, 0.0, 0, 0, Vector2(0.847222, 0.470588), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.08021, 0.0, 1, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_r3kjy"]
+curve = SubResource("Curve_sr1bm")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_203w6"]
+particle_flag_disable_z = true
+directional_velocity_min = -720.0
+directional_velocity_max = 720.0
+directional_velocity_curve = SubResource("CurveXYZTexture_cm1j1")
+orbit_velocity_min = -0.2
+orbit_velocity_max = 0.2
+radial_velocity_min = 5.0
+radial_velocity_max = 20.0
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_r3kjy")
+color = Color(0, 0, 1, 1)
+hue_variation_min = -1.0
+hue_variation_max = -1.0
+hue_variation_curve = SubResource("CurveTexture_e1x2y")
+
+[node name="11-particles" type="Node2D"]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(595, 330)
+amount = 200
+process_material = SubResource("ParticleProcessMaterial_203w6")
+texture = ExtResource("1_whm8h")
+lifetime = 10.0
