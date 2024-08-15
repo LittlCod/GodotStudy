@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5rkyhvubxyg"]
+
+[ext_resource type="PackedScene" uid="uid://cq2wacht8hqdp" path="res://Scene/UI.tscn" id="1_rd0sp"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="BackgroundRect" type="ColorRect" parent="Background"]
+offset_right = 480.0
+offset_bottom = 720.0
+color = Color(0.427786, 0.760535, 0.912734, 1)
+metadata/_edit_lock_ = true
+
+[node name="MainGame" type="CanvasLayer" parent="."]
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Ui" parent="UILayer" instance=ExtResource("1_rd0sp")]
+metadata/_edit_lock_ = true

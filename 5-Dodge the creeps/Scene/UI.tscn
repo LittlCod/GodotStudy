@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://cq2wacht8hqdp"]
+
+[ext_resource type="FontFile" uid="uid://dd52jk1260160" path="res://Fonts/Xolonium-Regular.ttf" id="1_ufkgs"]
+
+[sub_resource type="Theme" id="Theme_yg3vx"]
+default_font = ExtResource("1_ufkgs")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ia3wc"]
+font_size = 60
+
+[node name="Ui" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 480.0
+offset_bottom = 720.0
+theme = SubResource("Theme_yg3vx")
+
+[node name="TopContainer" type="CenterContainer" parent="."]
+layout_mode = 2
+offset_left = 1.0
+offset_right = 481.0
+offset_bottom = 120.0
+
+[node name="Label" type="Label" parent="TopContainer"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_ia3wc")
+
+[node name="MiddleContainer" type="CenterContainer" parent="."]
+layout_mode = 2
+offset_top = 246.0
+offset_right = 480.0
+offset_bottom = 415.0
+
+[node name="Label" type="Label" parent="MiddleContainer"]
+layout_mode = 2
+text = "Dodge the
+ Creeps"
+label_settings = SubResource("LabelSettings_ia3wc")
+horizontal_alignment = 1
+
+[node name="BottomContainer" type="CenterContainer" parent="."]
+layout_mode = 2
+offset_top = 390.0
+offset_right = 480.0
+offset_bottom = 717.0
+
+[node name="Button" type="Button" parent="BottomContainer"]
+custom_minimum_size = Vector2(250, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Start"
