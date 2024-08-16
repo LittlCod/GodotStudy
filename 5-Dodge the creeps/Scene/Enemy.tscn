@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://47hsri6ngv8t"]
+[gd_scene load_steps=10 format=3 uid="uid://47hsri6ngv8t"]
 
+[ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_248ml"]
 [ext_resource type="Texture2D" uid="uid://mou3g0difcos" path="res://Image/Enemy/enemyFlyingAlt_1.png" id="1_sykpv"]
 [ext_resource type="Texture2D" uid="uid://c5i7xkn7m8q31" path="res://Image/Enemy/enemyFlyingAlt_2.png" id="2_n1bea"]
 [ext_resource type="Texture2D" uid="uid://cnmckiatfr7yq" path="res://Image/Enemy/enemySwimming_1.png" id="3_213jr"]
@@ -43,6 +44,24 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Enemy" type="AnimatedSprite2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o4d06"]
+radius = 47.0
+height = 133.32
+
+[node name="Enemy" type="CharacterBody2D"]
+editor_description = "enemy"
+scale = Vector2(0.6, 0.6)
+script = ExtResource("1_248ml")
+
+[node name="EnemySpr" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_rd103")
 animation = &"Walking"
+autoplay = "Walking"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_o4d06")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

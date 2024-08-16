@@ -1,11 +1,32 @@
-[gd_scene load_steps=7 format=3 uid="uid://bxnln5c86md2l"]
+[gd_scene load_steps=13 format=3 uid="uid://bxnln5c86md2l"]
 
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_b8cp3"]
 [ext_resource type="Texture2D" uid="uid://dmjsdlhtc8syi" path="res://Image/Player/playerGrey_up1.png" id="1_ofehq"]
 [ext_resource type="Texture2D" uid="uid://vjteojctouj6" path="res://Image/Player/playerGrey_up2.png" id="2_mytkk"]
 [ext_resource type="Texture2D" uid="uid://bdv5ienkyd3y2" path="res://Image/Player/playerGrey_walk1.png" id="3_62doc"]
 [ext_resource type="Texture2D" uid="uid://c55xtqa2advym" path="res://Image/Player/playerGrey_walk2.png" id="4_gpii3"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l2heh"]
+[sub_resource type="Curve" id="Curve_2oh5v"]
+_data = [Vector2(0, 0.635294), 0.0, -0.635294, 0, 1, Vector2(1, 0), -0.635294, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_styjw"]
+curve = SubResource("Curve_2oh5v")
+
+[sub_resource type="Curve" id="Curve_ff0iw"]
+_data = [Vector2(0, 0.564706), 0.0, 0.0, 0, 0, Vector2(1, 0.258824), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_xjmh4"]
+curve = SubResource("Curve_ff0iw")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3qqu4"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_min = 0.6
+scale_max = 0.6
+scale_curve = SubResource("CurveTexture_xjmh4")
+alpha_curve = SubResource("CurveTexture_styjw")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bc4fc"]
 animations = [{
@@ -32,11 +53,23 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l2heh"]
+radius = 53.0
+height = 136.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_l2heh")
+[node name="Player" type="Area2D"]
+scale = Vector2(0.6, 0.6)
+script = ExtResource("1_b8cp3")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+process_material = SubResource("ParticleProcessMaterial_3qqu4")
+texture = ExtResource("3_62doc")
+lifetime = 0.5
+
+[node name="spr" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_bc4fc")
-animation = &"up"
+animation = &"walk"
+autoplay = "walk"
+
+[node name="box" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_l2heh")

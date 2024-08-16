@@ -11,12 +11,13 @@ config_version=5
 [application]
 
 config/name="5-Dodge the creeps"
+config/tags=PackedStringArray("study")
 run/main_scene="res://Scene/Main.tscn"
-config/features=PackedStringArray("4.2", "Forward Plus")
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
 window/size/viewport_width=480
 window/size/viewport_height=720
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"

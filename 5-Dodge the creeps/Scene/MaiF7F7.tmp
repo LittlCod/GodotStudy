@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5rkyhvubxyg"]
+[gd_scene load_steps=4 format=3 uid="uid://c5rkyhvubxyg"]
 
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_nobw1"]
 [ext_resource type="PackedScene" uid="uid://cq2wacht8hqdp" path="res://Scene/UI.tscn" id="1_rd0sp"]
 [ext_resource type="PackedScene" uid="uid://bxnln5c86md2l" path="res://Scene/Player.tscn" id="1_suk0a"]
-[ext_resource type="AudioStream" uid="uid://bnv8itsq501w2" path="res://Sound/House In a Forest Loop.ogg" id="2_1b3nj"]
-[ext_resource type="AudioStream" uid="uid://rndx6yis85hl" path="res://Sound/gameover.wav" id="3_fc6kb"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nobw1")
@@ -18,24 +16,12 @@ offset_bottom = 720.0
 color = Color(0.427786, 0.760535, 0.912734, 1)
 metadata/_edit_lock_ = true
 
-[node name="HouseInAForestLoop" type="AudioStreamPlayer" parent="Background"]
-stream = ExtResource("2_1b3nj")
-
-[node name="Gameover" type="AudioStreamPlayer" parent="Background"]
-stream = ExtResource("3_fc6kb")
-volume_db = 5.0
-
 [node name="MainGame" type="CanvasLayer" parent="."]
 
 [node name="Player" parent="MainGame" instance=ExtResource("1_suk0a")]
-
-[node name="AddEnemyTimer" type="Timer" parent="MainGame"]
-wait_time = 0.3
 
 [node name="UILayer" type="CanvasLayer" parent="."]
 layer = 2
 
 [node name="Ui" parent="UILayer" instance=ExtResource("1_rd0sp")]
 metadata/_edit_lock_ = true
-
-[connection signal="body_entered" from="MainGame/Player" to="MainGame/Player" method="_on_body_entered"]
