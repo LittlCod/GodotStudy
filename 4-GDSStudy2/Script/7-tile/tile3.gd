@@ -12,8 +12,8 @@ var path : = PackedVector2Array()
 # 获取瓦片速度数据
 func get_tile_speed() -> int:
 	var tilePosition = player.position
-	var tile = tile_map.local_to_map(tilePosition)
-	var cell_data = tile_map.get_cell_tile_data(0, tile)
+	var tile = tile_map.layer.local_to_map(tilePosition)
+	var cell_data = tile_map.layer.get_cell_tile_data(tile)
 	if cell_data:
 		return cell_data.get_custom_data("speed")
 	else:
@@ -33,8 +33,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	var playerPosition = player.global_position
 	var mousePosition = event.global_position
-	var startCellPosition = tile_map.local_to_map(playerPosition)
-	var endCellPosition = tile_map.local_to_map(mousePosition)
+	var startCellPosition = tile_map.layer.local_to_map(playerPosition)
+	var endCellPosition = tile_map.layer.local_to_map(mousePosition)
 	var navPath = tile_map.get_nav_path(startCellPosition, endCellPosition)
 	line_2d.points = navPath
 	path = navPath

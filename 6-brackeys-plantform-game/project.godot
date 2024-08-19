@@ -10,15 +10,6 @@ config_version=5
 
 [application]
 
-config/name="4-GDSStudy2"
-config/tags=PackedStringArray("study")
+config/name="6-Brackeys Plantform Game"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
-
-[display]
-
-window/stretch/mode="canvas_items"
-
-[rendering]
-
-textures/canvas_textures/default_texture_filter=0
