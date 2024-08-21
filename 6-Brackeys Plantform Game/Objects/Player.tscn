@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://bddvg16cnjr"]
+[gd_scene load_steps=47 format=3 uid="uid://bddvg16cnjr"]
 
 [ext_resource type="Texture2D" uid="uid://dv1i4urp8qclr" path="res://Assets/sprites/knight.png" id="1_kehg5"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_r3mag"]
@@ -301,6 +301,13 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_o127r"]
 radius = 5.02494
 
+[sub_resource type="Gradient" id="Gradient_4oued"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gukas"]
+gradient = SubResource("Gradient_4oued")
+width = 32
+height = 2
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 slide_on_ceiling = false
@@ -326,5 +333,14 @@ bus = &"SFX"
 [node name="Death" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_20xxh")
 bus = &"SFX"
+
+[node name="BloodBar" type="TextureProgressBar" parent="."]
+modulate = Color(1, 0, 0, 1)
+offset_left = -16.0
+offset_top = -9.0
+offset_right = 16.0
+offset_bottom = -6.0
+value = 100.0
+texture_progress = SubResource("GradientTexture2D_gukas")
 
 [connection signal="animation_finished" from="PlayerSpr" to="." method="_on_player_spr_animation_finished"]

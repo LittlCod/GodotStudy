@@ -2,12 +2,18 @@ extends CharacterBody2D
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
-var blood = 3
+var blood = 5
 @onready var player_spr: AnimatedSprite2D = $PlayerSpr
+@onready var blood_bar: TextureProgressBar = $BloodBar
 var lockAnimation = false
+
+func _ready() -> void:
+	blood_bar.max_value = blood
+	blood_bar.value = blood
 
 func death_fn():
 	$Death.play()
+	blood_bar.value = 0
 	player_spr.animation = "death"
 	lockAnimation = true
 	Engine.time_scale = 0.5
@@ -17,6 +23,7 @@ func death_fn():
 	
 func hit_fn(bloodHit):
 	blood -= bloodHit
+	blood_bar.value = blood
 	# 血量归零直接死亡
 	if blood <= 0:
 		death_fn()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://xahefmu2viv8"]
+[gd_scene load_steps=20 format=4 uid="uid://xahefmu2viv8"]
 
 [ext_resource type="PackedScene" uid="uid://bddvg16cnjr" path="res://Objects/Player.tscn" id="1_dgsf1"]
 [ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_w65u5"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://brov0kkpkvh5y" path="res://Objects/KillerArea.tscn" id="6_emabt"]
 [ext_resource type="PackedScene" uid="uid://b1jbww4htf6xd" path="res://Objects/SlimeGreen.tscn" id="7_jenm4"]
 [ext_resource type="FontFile" uid="uid://b4ibyox04uyd1" path="res://Assets/fonts/PixelOperator8.ttf" id="8_seiph"]
+[ext_resource type="PackedScene" uid="uid://ot52nthkkel7" path="res://Objects/SlimePurple.tscn" id="9_hqtm3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bxaqs"]
 texture = ExtResource("2_0esar")
@@ -453,7 +454,7 @@ shape = SubResource("WorldBoundaryShape2D_nu5tr")
 [node name="SlimeGreen" parent="SlimeContainer" instance=ExtResource("7_jenm4")]
 position = Vector2(88, 84)
 
-[node name="SlimeGreen2" parent="SlimeContainer" instance=ExtResource("7_jenm4")]
+[node name="SlimePurple" parent="SlimeContainer" instance=ExtResource("9_hqtm3")]
 position = Vector2(504, 68)
 
 [node name="UI" type="Control" parent="."]
